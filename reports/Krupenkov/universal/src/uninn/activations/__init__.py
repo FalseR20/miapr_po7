@@ -1,3 +1,4 @@
 from uninn.activations.activation import Activation
 from uninn.activations.linear_activation import LinearActivation
+from uninn.activations.relu_activation import ParametericReLuActivation, ReLuActivation
 from uninn.activations.sigmoid_activation import SigmoidActivation

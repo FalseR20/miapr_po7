@@ -23,8 +23,8 @@ class Layer:
         """
         self.lengths = lengths
         self.activation: Activation = activation or LinearActivation()
-        self.w: NDArray[float] = w or np.random.uniform(-0.5, 0.5, self.lengths)
-        self.t: NDArray[float] = t or np.random.uniform(-0.5, 0.5, self.lengths[1])
+        self.w: NDArray[float] = w or np.random.uniform(-0.1, 0.1, self.lengths)
+        self.t: NDArray[float] = t or np.random.uniform(-0.1, 0.1, self.lengths[1])
         self.x: Optional[NDArray[float]] = None
         self.s: Optional[NDArray[float]] = None
         self.y: Optional[NDArray[float]] = None
