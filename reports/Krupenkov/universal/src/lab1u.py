@@ -1,7 +1,6 @@
 import numpy as np
 from creation_utils import predict_set
-from uninn import *
-from uninn import Layer
+from uninn import Layer, NeuralNetwork
 
 
 # Функция по условию (лаб.1 вар.9)
@@ -17,6 +16,9 @@ def main():
     for t in range(10):  # Прогон набора _ раз
         square_error = nn.learn(learn_x, learn_e, 0.08)  # Метод для обучения
         print(f"Average square error {t : 3}: {square_error}")  # Вывод на каждой итерации средней ошибки
+        if square_error < 1e-20:
+            print("Learning threshold crossed, breaking...")
+            break
 
     test_x, test_e = predict_set(3, 5, 15, 0.1, function=function_lab1_9)  # Набор для тестирования
     nn.prediction_results_table(test_x, test_e)  # Метод для красивого вывода
