@@ -29,6 +29,6 @@ pip3 install -r ./requirements.txt
 Установка под Windows: разберетёсь))0)
 
 Исходники лежат в **reports/Krupenkov/universal/src**,
-рекомендуется пометить в PyCharm  чтобы не пыло проблем с импортами (*Mark Directory as > Sources Root*)
+рекомендуется пометить в PyCharm  чтобы не было проблем с импортами (*Mark Directory as > Sources Root*)
 
 Ну и далее запускать скрипты вида `labXu.py`, где `X` - номер лабы.
