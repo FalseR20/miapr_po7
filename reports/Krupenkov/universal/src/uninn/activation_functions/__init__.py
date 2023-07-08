@@ -1,3 +1,0 @@
-from uninn.activation_functions.act_fun import ActFun
-from uninn.activation_functions.linear_act_fun import LinearActFun
-from uninn.activation_functions.sigmoid_act_fun import SigmoidActFun

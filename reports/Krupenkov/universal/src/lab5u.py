@@ -11,7 +11,7 @@ def switch_bit(row: np.ndarray, j) -> np.ndarray:
 
 
 def main():
-    nn = NeuralNetwork(LayerSigmoid(lens=(20, 4)), LayerLinear(lens=(4, 3)))
+    nn = NeuralNetwork([LayerSigmoid(lengths=(20, 4)), LayerLinear(lengths=(4, 3))])
 
     learn_x = np.array(
         [

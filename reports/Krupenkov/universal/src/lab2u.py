@@ -5,8 +5,8 @@ from uninn import LayerLinear
 
 
 def main():
-    layer = LayerLinear(lens=(5, 1))
-    nn = NeuralNetwork(layer)
+    layer = LayerLinear(lengths=(5, 1))
+    nn = NeuralNetwork([layer])
 
     learn_x, learn_e = predict_set(0, 5, 30, 0.1, function=function_lab1_9)
     for t in range(10):

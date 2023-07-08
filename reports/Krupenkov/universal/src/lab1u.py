@@ -10,8 +10,8 @@ def function_lab1_9(x: float) -> float:
 
 
 def main():
-    layer = Layer(lens=(5, 1))  # Создание слоя
-    nn = NeuralNetwork(layer)  # Создание нейронной сети с этим слоем
+    layer = Layer(lengths=(5, 1))  # Создание слоя
+    nn = NeuralNetwork([layer])  # Создание нейронной сети с этим слоем
     learn_x, learn_e = predict_set(0, 5, 30, 0.1, function=function_lab1_9)  # Набор для предсказания функции
 
     for t in range(10):  # Прогон набора _ раз

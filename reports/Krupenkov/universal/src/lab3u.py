@@ -4,7 +4,7 @@ import numpy as np
 from creation_utils import predict_set
 from uninn import *
 from uninn import Layer
-from uninn.activation_functions import SigmoidActFun
+from uninn.activations import SigmoidActivation
 
 
 def function_lab3_9(x):
@@ -12,7 +12,7 @@ def function_lab3_9(x):
 
 
 def main():
-    nn = NeuralNetwork(Layer(lens=(10, 4), act_fun=SigmoidActFun()), Layer(lens=(4, 1)))
+    nn = NeuralNetwork([Layer(lengths=(10, 4), activation=SigmoidActivation()), Layer(lengths=(4, 1))])
 
     learn_x, learn_e = predict_set(0, 10, 30, 0.1, function=function_lab3_9)
     test_x, test_e = predict_set(3, 10, 15, 0.1, function=function_lab3_9)

@@ -7,7 +7,7 @@ from uninn import LayerLinear, LayerSigmoid
 
 
 def main():
-    nn = NeuralNetwork(LayerSigmoid(lens=(10, 4)), LayerLinear(lens=(4, 1)))
+    nn = NeuralNetwork([LayerSigmoid(lengths=(10, 4)), LayerLinear(lengths=(4, 1))])
 
     learn_x, learn_e = predict_set(0, 10, 30, 0.1, function=function_lab3_9)
     test_x, test_e = predict_set(3, 10, 15, 0.1, function=function_lab3_9)
