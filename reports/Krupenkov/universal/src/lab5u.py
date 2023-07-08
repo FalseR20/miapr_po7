@@ -1,5 +1,8 @@
-from uninn import *
 import time
+
+import numpy as np
+from uninn import *
+from uninn import LayerLinear, LayerSigmoid
 
 
 def switch_bit(row: np.ndarray, j) -> np.ndarray:
@@ -8,16 +11,13 @@ def switch_bit(row: np.ndarray, j) -> np.ndarray:
 
 
 def main():
-    nn = NeuralNetwork(
-        LayerSigmoid(lens=(20, 4)),
-        LayerLinear(lens=(4, 3))
-    )
+    nn = NeuralNetwork(LayerSigmoid(lens=(20, 4)), LayerLinear(lens=(4, 3)))
 
     learn_x = np.array(
         [
             [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0],
             [1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0],
-            [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1]
+            [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1],
         ]
     )
     learn_e = np.eye(3)

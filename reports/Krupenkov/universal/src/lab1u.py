@@ -1,4 +1,7 @@
+import numpy as np
+from creation_utils import predict_set
 from uninn import *
+from uninn import Layer
 
 
 # Функция по условию (лаб.1 вар.9)
